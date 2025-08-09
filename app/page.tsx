@@ -1,9 +1,15 @@
-import { intro, work, education, projects, openSource } from "@/lib/content";
-import type { Intro } from "@/lib/content";
-import { Copy } from "@/components/copy";
-import Image from "next/image";
-import Logo from "@/public/logo.svg";
-import { DownloadPDF } from "@/components/download";
+import {
+  intro,
+  work,
+  education,
+  projects,
+  certifications,
+} from '@/lib/content';
+import type { Intro } from '@/lib/content';
+import { Copy } from '@/components/copy';
+import Image from 'next/image';
+import Logo from '@/public/logo-v1.svg';
+import { DownloadPDF } from '@/components/download';
 
 export default function Home() {
   return (
@@ -37,16 +43,60 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-4 fade-in-up !delay-1000">
-        <h2>Open Source</h2>
+      <section className="grid gap-4 fade-in-up !delay-900">
+        <h2>Certifications & Awards</h2>
         <div className="grid divide-y">
-          {openSource.map((item) => (
+          {certifications.map((item) => (
             <Item key={item.title} {...item} />
           ))}
         </div>
       </section>
 
-      <p className="text-muted-foreground text-xs fade-in-up !delay-1000">
+      <section className="grid gap-4 fade-in-up !delay-1100">
+        <h2>Technical Skills</h2>
+        <div className="grid gap-4 px-3 -mx-3">
+          <div className="grid sm:grid-cols-[1fr_2fr] gap-5 sm:gap-2">
+            <h3 className="font-medium">Programming Languages</h3>
+            <p className="text-muted-foreground">
+              JavaScript (ES6+), TypeScript, Python, Java, HTML5, CSS3, SQL
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-[1fr_2fr] gap-5 sm:gap-2">
+            <h3 className="font-medium">Frontend</h3>
+            <p className="text-muted-foreground">
+              React.js, Next.js, Vue.js, Tailwind CSS, Material-UI
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-[1fr_2fr] gap-5 sm:gap-2">
+            <h3 className="font-medium">Backend</h3>
+            <p className="text-muted-foreground">
+              Django, Django REST Framework, Node.js, Spring Boot, GraphQL
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-[1fr_2fr] gap-5 sm:gap-2">
+            <h3 className="font-medium">Databases</h3>
+            <p className="text-muted-foreground">
+              PostgreSQL, MySQL, SQLite, Redis, MongoDB
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-[1fr_2fr] gap-5 sm:gap-2">
+            <h3 className="font-medium">Cloud & DevOps</h3>
+            <p className="text-muted-foreground">
+              AWS (EC2, S3, RDS, Lambda), Google Cloud Platform, Docker,
+              Kubernetes, GitHub Actions, GitLab CI/CD
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-[1fr_2fr] gap-5 sm:gap-2">
+            <h3 className="font-medium">Methodologies</h3>
+            <p className="text-muted-foreground">
+              Agile/Scrum, Test-Driven Development (TDD), Microservices
+              Architecture, System Design
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <p className="text-muted-foreground text-xs fade-in-up !delay-1200">
         &copy; {new Date().getFullYear()} {intro.name}
       </p>
     </main>
@@ -63,13 +113,11 @@ function Intro({ intro }: IntroProps) {
       <Image
         src={Logo}
         alt={intro.name}
-        width={48}
-        height={39.09}
-        className="invert dark:invert-0 mb-8 fade-in-up"
+        width={30}
+        height={30}
+        className=" dark:invert-0 mb-8 fade-in-up"
       />
-
       <h1 className="fade-in-up !delay-100">{intro.name}</h1>
-
       <div className="dont-print flex gap-4 fade-in-up !delay-200">
         <a href={intro.href} target="_blank">
           Portfolio
@@ -86,10 +134,9 @@ function Intro({ intro }: IntroProps) {
           fileName={`${intro.name
             .toString()
             .toLowerCase()
-            .replace(/\s/g, "_")}_resume_2024.pdf`}
+            .replace(/\s/g, '_')}_resume_2024.pdf`}
         />
       </div>
-
       <p className="text-muted-foreground max-w-prose fade-in-up !delay-300">
         {intro.about}
       </p>

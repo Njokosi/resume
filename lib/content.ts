@@ -24,172 +24,165 @@ export interface EducationItem extends ResumeItem {
 
 export interface ProjectItem extends ResumeItem {
   title: string;
-  href: string;
+  href?: string;
   description: string[];
 }
 
-export interface OpenSourceItem extends ResumeItem {
+export interface CertificationItem extends ResumeItem {
   title: string;
-  href: string;
+  date?: string;
   description: string[];
 }
 
 export const intro: Intro = {
-  name: "Bridger Tower",
+  name: "Njokosi Jones Kawunju",
   about:
-    "I'm a designer and developer specializing in creating intuitive, high-performance software and websites that merge visual excellence with practical functionality. I am passionate about human computer interaction, usability, and aesthetics in software and technology.",
-  href: "https://bridger.to",
-  github: "https://github.com/brijr",
-  linkedin: "https://linkedin.com/in/brijr",
-  email: "bridgertower@gmail.com",
+    "I'm Software Engineer with over 4 years of experience building scalable, enterprise-grade applications from the ground up. I specialize in React, Next.js, Django, and Vue.js, with deep expertise in multi-tenant SaaS platforms, system architecture, and leading development teams to deliver secure, high-performance solutions.",
+  href: "https://njokosi.dev", // You'll need to update this to actual portfolio URL
+  github: "https://github.com/njokosi",
+  linkedin: "https://linkedin.com/in/njokosi",
+  email: "njokosi@gmail.com",
 };
 
 export const work: ResumeItem[] = [
   {
-    title: "Design Engineer at Ampry",
-    href: "https://ampry.com",
-    date: "2023 to Present",
-    location: "Pleasant Grove, UT",
+    title: "Senior Software Engineer at Zuno Carbon",
+    href: "https://zunocarbon.com",
+    date: "Aug 2022 to Present",
+    location: "Remote, Singapore",
     description: [
-      "Lead product engineering initiatives and design system architecture",
-      "Drive technical implementation of component libraries",
-      "Manage end-to-end product development workflows",
+      "Architected and led development of a multi-tenant SaaS platform for 20+ enterprise clients, implementing robust data segregation and security protocols (Certified by ISSB, AICPA SOC, ISO 14064)",
+      "Built carbon emissions engine processing 10,000+ daily data points, improving accuracy by 40% and reducing processing time from 30 minutes to 4 minutes",
+      "Designed automated CDP reporting system with React.js and Django, cutting manual report generation time by 80%",
+      "Mentored 3 junior developers, raising code quality metrics by 60% and achieved 90%+ test coverage, reducing production bugs by 75%",
     ],
   },
   {
-    title: "Design Engineer at 9d8",
-    href: "https://9d8.dev",
-    date: "2021 to Present",
-    location: "Remote",
+    title: "Software Engineer at Zuno Carbon",
+    href: "https://zunocarbon.com",
+    date: "Jan 2022 to Aug 2022",
+    location: "Remote, Singapore",
     description: [
-      "Design and develop AI-powered solutions for marketing and sales teams",
-      "Create scalable systems that enhance client workflow efficiency",
-      "Implement cutting-edge AI technologies in user-friendly interfaces",
+      "Built CI/CD pipelines with Celery, RabbitMQ, and Docker, enabling weekly releases across 3 teams",
+      "Developed RBAC-based user management system for 500+ users across organizations",
+      "Created real-time task monitoring dashboard with WebSockets",
+      "Optimized database queries, cutting dashboard load time from 15s to 1s",
     ],
   },
   {
-    title: "Creative Developer at Tackle",
-    href: "https://tackle.io",
-    date: "2022 to 2023",
-    location: "Remote",
+    title: "Software Engineer & Technical Lead at e-Government Authority",
+    date: "Feb 2021 to Aug 2021",
+    location: "Dodoma, Tanzania",
     description: [
-      "Led development of design systems and technical architecture",
-      "Improved site performance metrics while scaling development workflows",
-      "Implemented automated testing and deployment processes",
+      "Led an 8-person team delivering 4 national-scale government web applications serving 100k+ citizens",
+      "Developed mikutano.gov.go.tz, enabling 50+ concurrent government meetings",
+      "Built eboard.gov.go.tz, a digital board meeting platform used by 50+ government boards",
+      "Implemented security monitoring reducing incidents by 50%",
     ],
   },
   {
-    title: "Founding Designer at Ampry",
-    href: "https://ampry.com",
-    date: "2020 to 2022",
-    location: "Pleasant Grove, UT",
+    title: "Full-Stack Developer & System Architect at Agricom & Bravo Logistics",
+    date: "Aug 2021 to Jan 2022",
+    location: "Dar es Salaam, Tanzania",
     description: [
-      "Built scalable design systems for CRO tech startup from ground up",
-      "Developed and implemented conversion optimization strategies",
-      "Assisted in significant conversion improvements across 200+ clients",
+      "Rebuilt company website with Next.js, improving user engagement by 120%",
+      "Integrated SAP ERP with attendance tracking system, automating payroll for 60+ employees",
+      "Optimized system performance, significantly reducing downtime and improving reliability",
     ],
   },
   {
-    title: "Designer at Zion",
-    href: "https://zion.surf",
-    date: "2018 to 2022",
-    location: "Lehi, UT",
+    title: "Software Engineer & Systems Analyst at Judiciary Statistical Dashboard System",
+    date: "May 2019 to Jul 2019",
+    location: "Dar es Salaam, Tanzania",
     description: [
-      "Collaborated with 100+ brands and marketing agencies",
-      "Created cohesive visual narratives across multiple platforms",
-      "Mediums include brand, web, social, product, and publication design",
+      "Analyzed judiciary platforms serving 500+ courts, identifying 15 critical system improvements",
+      "Implemented solutions improving system uptime and reducing incidents by 60%",
+      "Enhanced platform performance and reliability for court management systems",
     ],
   },
 ];
 
 export const education: EducationItem[] = [
   {
-    title: "BA Advertising at BYU",
-    date: "2018 to 2022",
-    location: "Provo, UT",
+    title: "B.Tech in Computer Science & Engineering (Information Security) at VIT University",
+    date: "2017 to 2021",
+    location: "Vellore, India",
     description: [
-      "Focus: Brand strategy and communication design",
-      "Developed expertise in account leadership and growth marketing",
-      "Led multiple award-winning campaign projects",
+      "Specialized in Information Security and Software Engineering",
+      "Completed comprehensive coursework in algorithms, data structures, and system design",
+      "Gained expertise in cybersecurity, network security, and secure software development",
     ],
   },
   {
-    title: "UX Design Certificate at Google",
-    date: "2020 to 2021",
-    location: "Remote",
+    title: "Certificate in French Studies (Level 1) at Université Badji Mokhtar Annaba",
+    date: "2015 to 2016",
+    location: "Annaba, Algeria",
     description: [
-      "Mastered user journey mapping and wireframing techniques",
-      "Completed 5 end-to-end product design projects",
-      "Applied UX principles to real-world client challenges",
+      "Completed foundational French language studies",
+      "Developed cross-cultural communication skills",
+      "Enhanced international perspective and adaptability",
     ],
   },
 ];
 
 export const projects: ProjectItem[] = [
   {
-    title: "Outr.ai",
-    href: "https://outr.ai",
+    title: "Homebora",
     description: [
-      "AI agents for scaling sales outreach",
-      "Role: Product Designer, AI Engineer, and Design Engineer",
-      "Built with Typescript and Next.js",
+      "Property Management SaaS platform for landlords and property managers",
+      "Built with Django, React.js, PostgreSQL, Celery, Redis, and AWS",
+      "Features automated rent collection, maintenance tracking, and tenant communication",
     ],
   },
   {
-    title: "WaveFinder",
-    href: "https://wavefinder.io",
+    title: "Scrum Story Point Planner",
     description: [
-      "Marketing message testing powered by AI",
-      "Role: Product Designer, AI Engineer, and Design Engineer",
-      "Built with Typescript and Next.js",
+      "Real-time collaborative planning tool for agile development teams",
+      "Built with Next.js, Supabase, and WebSockets for real-time collaboration",
+      "Currently used by Zuno Carbon development teams for sprint planning",
     ],
   },
   {
-    title: "Swyftfin",
-    href: "https://swyftfin.com",
+    title: "Web Security Monitoring System",
     description: [
-      "Portable lending platform for home service providers",
-      "Role: Product Designer and Design Engineer",
-      "Built with Typescript and Next.js",
+      "Automated monitoring system for web application security and performance",
+      "Built with Django, Python, and Shell Scripting",
+      "Monitors SSL certificates, domain availability, and performance metrics",
     ],
   },
 ];
 
-export const openSource: OpenSourceItem[] = [
+export const certifications: CertificationItem[] = [
   {
-    title: "Router.so",
-    href: "https://router.so",
+    title: "Winner — OceanChallenge4Africa Hackathon",
+    date: "2022",
     description: [
-      "Headless lead router and form backend",
-      "Role: Product Designer and Design Engineer",
-      "200+ Stars on Github, 800+ Users",
+      "First place winner at Garage48 OceanChallenge4Africa Hackathon",
+      "Developed innovative solution for ocean conservation challenges",
     ],
   },
   {
-    title: "Components",
-    href: "https://components.bridger.to",
+    title: "AWS Fundamentals & Security in Google Cloud Platform",
+    date: "2020",
     description: [
-      "Collection of components for building marketing websites",
-      "Next.js, Tailwind, React, Typescript, and shadcn/ui",
-      "260+ Stars on Github",
+      "Completed comprehensive AWS fundamentals training",
+      "Gained expertise in cloud security best practices on Google Cloud Platform",
     ],
   },
   {
-    title: "Craft Design System",
-    href: "https://craft-ds.com",
+    title: "Software Architecture & Agile Practices",
+    date: "2020",
     description: [
-      "Design system for building websites FAST!",
-      "Next.js, Tailwind, React, Typescript, and shadcn/ui",
-      "170+ Stars on Github",
+      "Advanced certification in software architecture design patterns",
+      "Specialized training in Agile development methodologies and practices",
     ],
   },
   {
-    title: "Next WP",
-    href: "https://wp.9d8.dev",
+    title: "Algorithms Specialization — Stanford University",
+    date: "2020",
     description: [
-      "Wordpress as a headless CMS using Next.js",
-      "Featured by Vercel as a template",
-      "620+ Stars on Github",
+      "Completed comprehensive algorithms and data structures specialization",
+      "Advanced study of algorithmic thinking and problem-solving techniques",
     ],
   },
 ];
