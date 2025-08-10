@@ -195,6 +195,7 @@ export const projects: ProjectItem[] = [
   },
   {
     title: 'Scrum Story Point Planner',
+    href: 'https://zunopoker.vercel.app',
     description: [
       'Real-time collaborative planning tool for agile development teams.',
       'Built with Next.js, Supabase, and WebSockets to enable instant updates.',

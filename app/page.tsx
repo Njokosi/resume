@@ -10,6 +10,7 @@ import { Copy } from '@/components/copy';
 import Image from 'next/image';
 import Logo from '@/public/logo-v1.svg';
 import { DownloadPDF } from '@/components/download';
+import { GitHubContributions } from '@/components/github';
 
 export default function Home() {
   return (
@@ -154,7 +155,15 @@ type ItemProps = {
   showTechBadges?: boolean;
 };
 
-function Item({ title, date, description, href, location, technologies, showTechBadges = false }: ItemProps) {
+function Item({
+  title,
+  date,
+  description,
+  href,
+  location,
+  technologies,
+  showTechBadges = false,
+}: ItemProps) {
   return (
     <section className="grid sm:grid-cols-[1fr_2fr] py-3 gap-5 sm:gap-2 px-3 -mx-3 hover:bg-muted/50 transition-all">
       <div>
@@ -182,7 +191,7 @@ function Item({ title, date, description, href, location, technologies, showTech
             </p>
           ))}
         </div>
-        
+
         {showTechBadges && technologies && technologies.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mt-2">
             {technologies.map((tech) => (
