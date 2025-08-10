@@ -39,7 +39,7 @@ export interface CertificationItem extends ResumeItem {
 export const intro: Intro = {
   name: 'Njokosi Jones Kawunju',
   about:
-    'Senior Software Engineer with over 4 years of experience designing and delivering scalable, enterprise-grade applications. Skilled in React, Next.js, Django, and Vue.js, with a strong background in multi-tenant SaaS architecture, systems integration, and leading teams to build secure, high-performance solutions.',
+    'Senior Software Engineer with over 4 years of experience designing and delivering scalable, enterprise-grade applications. Skilled in React, Next.js, Django, with a strong background in multi-tenant SaaS architecture, systems integration, and leading teams to build secure, high-performance solutions.',
   href: 'https://njokosi.dev',
   github: 'https://github.com/njokosi',
   linkedin: 'https://linkedin.com/in/njokosi',
