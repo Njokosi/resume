@@ -155,6 +155,7 @@ export const education: EducationItem[] = [
   {
     title:
       'B.Tech in Computer Science & Engineering (Information Security) · VIT University',
+    href: 'https://vit.ac.in',
     date: '2017 · 2021',
     location: 'Vellore, India',
     description: [
