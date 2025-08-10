@@ -8,7 +8,7 @@ import {
 import type { Intro } from '@/lib/content';
 import { Copy } from '@/components/copy';
 import Image from 'next/image';
-import Logo from '@/public/logo.svg';
+import Logo from '@/public/logo-v1.svg';
 import { DownloadPDF } from '@/components/download';
 
 export default function Home() {
