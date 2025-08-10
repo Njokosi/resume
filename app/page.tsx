@@ -8,7 +8,7 @@ import {
 import type { Intro } from '@/lib/content';
 import { Copy } from '@/components/copy';
 import Image from 'next/image';
-import Logo from '@/public/logo-v1.svg';
+import Logo from '@/public/logo.svg';
 import { DownloadPDF } from '@/components/download';
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
         <h2>Work</h2>
         <div className="grid divide-y">
           {work.map((item) => (
-            <Item key={item.title} {...item} />
+            <Item key={item.title} {...item} showTechBadges={true} />
           ))}
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function Home() {
         <h2>Projects</h2>
         <div className="grid divide-y">
           {projects.map((item) => (
-            <Item key={item.title} {...item} />
+            <Item key={item.title} {...item} showTechBadges={true} />
           ))}
         </div>
       </section>
@@ -150,9 +150,11 @@ type ItemProps = {
   description: string[];
   href?: string;
   location?: string;
+  technologies?: string[];
+  showTechBadges?: boolean;
 };
 
-function Item({ title, date, description, href, location }: ItemProps) {
+function Item({ title, date, description, href, location, technologies, showTechBadges = false }: ItemProps) {
   return (
     <section className="grid sm:grid-cols-[1fr_2fr] py-3 gap-5 sm:gap-2 px-3 -mx-3 hover:bg-muted/50 transition-all">
       <div>
@@ -172,12 +174,27 @@ function Item({ title, date, description, href, location }: ItemProps) {
           <p className="text-muted-foreground text-xs sm:text-sm">{location}</p>
         )}
       </div>
-      <div className="grid gap-1">
-        {description.map((item, i) => (
-          <p key={i} className="text-muted-foreground">
-            {item}
-          </p>
-        ))}
+      <div className="grid gap-3">
+        <div className="grid gap-1">
+          {description.map((item, i) => (
+            <p key={i} className="text-muted-foreground">
+              {item}
+            </p>
+          ))}
+        </div>
+        
+        {showTechBadges && technologies && technologies.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-2">
+            {technologies.map((tech) => (
+              <span
+                key={tech}
+                className="inline-flex items-center rounded-full bg-teal-50 px-2 py-1 text-xs font-medium text-teal-700 ring-1 ring-teal-600/20 ring-inset"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
